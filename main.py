@@ -10,17 +10,9 @@ from tkinter import *
 from tkinter import ttk
 
 
-def open_youtube():
-    youtube_path = r"C:\Users\User\Desktop\YouTube.lnk"
-    os.startfile(youtube_path)
+def open_app(path):
+    os.startfile(path)
 
-def open_google():
-    google_path = r"c:\Users\User\Desktop\Google Chrome.lnk"
-    os.startfile(google_path)
-
-def open_tg():
-    tg_path = r"c:\Users\User\Desktop\Telegram.lnk"
-    os.startfile(tg_path)
 
 def open_jutsu():
   url = 'https://jut.su/'
@@ -57,11 +49,11 @@ def listen_for_command():
 
 def process_command(command):
     if "открой youtube" in command:
-        open_youtube()
+        open_app(r"c:\Users\User\Desktop\YouTube.lnk")
     elif "открой гугл" in command:
-        open_google()
+        open_app(r"c:\Users\User\Desktop\Google Chrome.lnk")
     elif "открой telegram" in command:
-        open_tg()
+        open_app(r'c:\Users\User\Desktop\Telegram.lnk')
     elif "открой jut.su" in command:
         open_jutsu()
     elif "заткнись" in command:
